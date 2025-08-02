@@ -7,8 +7,10 @@ import TaskList from "../components/TaskList";
 import "../styles/todolist.css";
 import SearchIcon from "../Icons/SearchIcon";
 import NoContent from "../components/NoContent";
+import useViewPortHeight from "../hook/useViewPortHeight";
 
 const TodoList = () => {
+  useViewPortHeight();
   const todoList = useSelector((state: ListType[] | []) => state);
   const dispatch = useDispatch();
   const [list, setList] = useState(todoList);
