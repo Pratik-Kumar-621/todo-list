@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import type { ListType } from "../redux/reducer";
@@ -10,7 +10,7 @@ const EditItem = () => {
   const itemId = parseInt(pathname.pathname.split("/")[2]);
 
   //filtering the item to edit
-  const list: ListType[] = useSelector((state) => state);
+  const list: any = useSelector((state) => state);
   const item = list.filter((item: ListType) => item.id === itemId)[0];
 
   //creating state for the form
@@ -22,7 +22,7 @@ const EditItem = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormItem({
       ...formItem,
       [e.target.name]: e.target.value,

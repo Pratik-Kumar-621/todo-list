@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import type { ListType } from "../redux/reducer";
@@ -27,7 +27,7 @@ const TodoList = () => {
       );
     })();
   }, [searchParams]);
-  const handleSearch = (e) => {
+  const handleSearch = (e: any) => {
     const value = e.target.value;
     setSearchText(value);
     if (value.trim() === "") {

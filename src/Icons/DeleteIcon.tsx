@@ -5,16 +5,9 @@ const DeleteIcon = () => {
       version="1.1"
       baseProfile="tiny"
       id="Layer_1"
-      xmlns:x="&ns_extend;"
-      xmlns:i="&ns_ai;"
-      xmlns:graph="&ns_graphs;"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
       width="20px"
       height="20px"
       viewBox="-0.5 0.5 42 42"
-      xml:space="preserve"
     >
       <path
         d="M12.5,16.5v17h3v-17H12.5z M18.5,16.5v17h3v-17H18.5z M24.5,16.5v17h3v-17H24.5z M27.5,4.5c0-2.5-0.609-3-3-3h-10
