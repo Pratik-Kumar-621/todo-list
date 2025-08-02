@@ -25,7 +25,7 @@
 
 .todo .todo-add {
   position: absolute;
-  top: calc(100vh - 80px);
+  top: calc(90vh - 80px);
   background-color: #034ea2;
   right: 20px;
   width: 60px;

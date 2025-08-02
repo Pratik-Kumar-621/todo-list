@@ -11,6 +11,7 @@
   border: 1px solid #dddddd;
   color: #231f20;
   border-radius: 3px;
+  font-size: 12px;
 }
 .selectfield-value {
   height: 32px;
@@ -36,6 +37,7 @@
   border-radius: 3px;
   resize: vertical;
   border: 1px solid #dddddd;
+  font-size: 12px;
   color: #231f20;
   padding: 10px 12px;
 }
@@ -89,7 +91,7 @@
 .selectfield .selectfield-options {
   position: absolute;
   margin-top: 10px;
-  border: 1px solid #dddddddd;
+  border: 1px solid #dddddd;
   box-shadow: 0 4px 3px #dddddd40;
   width: calc(100% - 28px);
   background-color: white;
@@ -109,4 +111,12 @@
 
 .selectfield-options-item:hover {
   background-color: #f7f7f7;
+}
+
+.nocontent {
+  padding: 20px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  color: rgb(116, 115, 115);
 }

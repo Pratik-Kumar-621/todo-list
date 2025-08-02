@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import type { ListType } from "../redux/reducer";
 import Heading from "../components/Heading";
-import Accordian from "../components/Accordian";
+import TaskList from "../components/TaskList";
 import "../styles/todolist.css";
 import SearchIcon from "../Icons/SearchIcon";
+import NoContent from "../components/NoContent";
 
 const TodoList = () => {
   const todoList = useSelector((state: ListType[] | []) => state);
@@ -55,8 +56,9 @@ const TodoList = () => {
           onChange={handleSearch}
         />
       </div>
+      {list.length === 0 && <NoContent />}
       {list.filter((item) => item.status === "inProgress").length ? (
-        <Accordian
+        <TaskList
           listType="In Progress"
           list={list.filter((item) => item.status === "inProgress")}
           handleDelete={handleDelete}
@@ -65,7 +67,7 @@ const TodoList = () => {
         ""
       )}
       {list.filter((item) => item.status === "pending").length ? (
-        <Accordian
+        <TaskList
           listType="Pending"
           list={list.filter((item) => item.status === "pending")}
           handleDelete={handleDelete}
@@ -74,7 +76,7 @@ const TodoList = () => {
         ""
       )}
       {list.filter((item) => item.status === "completed").length ? (
-        <Accordian
+        <TaskList
           listType="Completed"
           list={list.filter((item) => item.status === "completed")}
           handleDelete={handleDelete}
