@@ -3,6 +3,7 @@ export type ListType = {
   title: string;
   description: string;
   status: string;
+  date: any;
 };
 
 const initialList: ListType[] | [] = [];

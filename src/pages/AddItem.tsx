@@ -23,6 +23,7 @@ const AddItem = () => {
       title: formItem.title,
       description: formItem.description,
       status: "inProgress",
+      date: new Date(),
     };
     dispatch({ type: "ADD_TODO", payload: newItem });
     setFormItem({

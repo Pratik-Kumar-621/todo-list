@@ -5,8 +5,8 @@ const DeleteIcon = () => {
       version="1.1"
       baseProfile="tiny"
       id="Layer_1"
-      width="20px"
-      height="20px"
+      width="16px"
+      height="16px"
       viewBox="-0.5 0.5 42 42"
     >
       <path
