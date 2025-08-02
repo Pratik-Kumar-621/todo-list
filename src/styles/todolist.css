@@ -134,7 +134,10 @@
   height: 22px;
 }
 
-.todolist .todolist-list .todolist-list-item .todolist-list-item-edit,
-.todolist .todolist-list .todolist-list-item .todolist-list-item-delete {
+.todolist .todolist-list .todolist-list-item .todolist-list-item-edit:hover,
+.todolist .todolist-list .todolist-list-item .todolist-list-item-delete:hover {
   cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.1s linear;
+  transform: scale(1.2);
 }

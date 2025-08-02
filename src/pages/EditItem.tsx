@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import type { ListType } from "../redux/reducer";
 import Heading from "../components/Heading";
+import SelectField from "../components/SelectField";
 
 const EditItem = () => {
   // fetching id from the path
@@ -46,35 +47,30 @@ const EditItem = () => {
   return (
     <div className="edit">
       <Heading heading="Edit Todo" />
-      <div className="edit-form">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            className="edit-form-title"
-            name="title"
-            value={formItem.title}
-            onChange={handleChange}
-          />
-          <textarea
-            name="description"
-            value={formItem.description}
-            className="edit-form-description"
-            onChange={handleChange}
-          ></textarea>
-          <select name="status" value={formItem.status} onChange={handleChange}>
-            <option value="pending">
-              <span className="pending"></span>Pending
-            </option>
-            <option value="inProgress">
-              <span className="progress"></span>In Progress
-            </option>
-            <option value="completed">
-              <span className="completed"></span>Completed
-            </option>
-          </select>
-          <button type="submit">Update</button>
-        </form>
-      </div>
+      <form onSubmit={handleSubmit} className="form">
+        <input
+          type="text"
+          className="form-title"
+          name="title"
+          value={formItem.title}
+          onChange={handleChange}
+        />
+        <textarea
+          name="description"
+          value={formItem.description}
+          className="form-description"
+          onChange={handleChange}
+        ></textarea>
+        <SelectField {...{ formItem, setFormItem }} />
+        <div className="form-actions">
+          <button className="cancel-button" onClick={() => navigate("/")}>
+            Cancel
+          </button>
+          <button type="submit" className="save-button">
+            Update
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

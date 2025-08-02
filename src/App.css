@@ -1,0 +1,59 @@
+.form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  height: 30px;
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+.form-description {
+  min-height: 70px;
+  resize: vertical;
+  padding: 10px 12px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.cancel-button,
+.save-button {
+  width: 110px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.cancel-button {
+  background-color: white;
+  border: 1px solid #034ea2;
+  color: #034ea2;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s linear;
+}
+
+.cancel-button:active {
+  background-color: rgb(21, 2, 58);
+  color: white;
+}
+
+.save-button {
+  background-color: #034ea2;
+  border: 1px solid #034ea2;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s linear;
+}
+
+.save-button:active {
+  background-color: rgb(0, 0, 0);
+}

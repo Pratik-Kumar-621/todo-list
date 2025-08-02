@@ -7,6 +7,7 @@ import {
 import AddItem from "./pages/AddItem";
 import TodoList from "./pages/TodoList";
 import EditItem from "./pages/EditItem";
+import "./App.css";
 
 const App = () => {
   return (

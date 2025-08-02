@@ -34,26 +34,37 @@ const AddItem = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="add">
       <Heading heading="Add Task" />
-      <input
-        type="text"
-        name="title"
-        placeholder="Name"
-        value={formItem.title}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        placeholder="Description"
-        name="description"
-        value={formItem.description}
-        onChange={handleChange}
-        required
-      />
+      <form onSubmit={handleSubmit} className="form">
+        <input
+          className="form-title"
+          type="text"
+          name="title"
+          placeholder="Name"
+          value={formItem.title}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          className="form-description"
+          placeholder="Description"
+          name="description"
+          value={formItem.description}
+          onChange={handleChange}
+          required
+        />
 
-      <button type="submit">Add Todo</button>
-    </form>
+        <div className="form-actions">
+          <button className="cancel-button" onClick={() => navigate("/")}>
+            Cancel
+          </button>
+          <button type="submit" className="save-button">
+            Add Todo
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 
