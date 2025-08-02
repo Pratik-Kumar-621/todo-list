@@ -1,0 +1,20 @@
+.heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #034ea2;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  height: 60px;
+  padding-left: 20px;
+}
+.heading-button {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.heading-title {
+  font-size: 16px;
+}
